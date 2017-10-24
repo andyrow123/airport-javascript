@@ -13,4 +13,9 @@ describe('Unit Test for airport', function() {
     airport.land(plane);
     expect(airport.planes()).toContain(plane);
   });
+
+  it ("allows a plane to take off", function() {
+    airport.takeOff(plane);
+    expect(airport.planes()).not.toContain(plane)
+  });
 });
