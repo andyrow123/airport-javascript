@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Feature Test:', function(){
-    var plane;
-    var airport;
+describe('Unit Test for airport', function() {
+      var plane;
+      var airport;
 
-    beforeEach(function(){
+      beforeEach(function(){
         plane = new Plane();
         airport = new Airport();
-    });
+          });
 
-    it('planes can be instructed to land at an airport', function(){
-        plane.land(airport);
-        expect(airport.planes()).toContain(plane);
-    });
+  it ("allows a plane to land", function () {
+    airport.land(plane);
+    expect(airport.planes()).toContain(plane);
+  });
 });
